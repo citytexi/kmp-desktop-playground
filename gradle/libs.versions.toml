@@ -2,41 +2,106 @@
 mac-packageName = "com.huihun.playground"
 mac-version = "1.0.0"
 
+# https://github.com/JetBrains/kotlin/releases
 kotlin = "2.3.20"
+
+# https://github.com/Kotlin/kotlinx.coroutines/releases
 kotlinx-coroutines = "1.10.2"
+
+# https://github.com/Kotlin/kotlinx-datetime/releases
+kotlinx-datetime = "0.7.1"
+
+# https://github.com/Kotlin/kotlinx.serialization/releases
+kotlinx-serialization = "1.10.0"
 
 agp = "9.0.0"
 
+# https://github.com/JetBrains/compose-multiplatform/releases
 composeMultiplatform = "1.10.3"
 composeMaterial3 = "1.10.0-alpha05"
+
+# https://github.com/JetBrains/compose-hot-reload/releases
 composeHotReload = "1.0.0"
 
+# https://developer.android.com/jetpack/androidx/releases/lifecycle
 androidx-lifecycle = "2.10.0"
+
+# https://developer.android.com/jetpack/androidx/releases/navigation
+androidx-navigation = "2.8.0-alpha13"
+
+# https://github.com/orbit-mvi/orbit-mvi/releases
+orbit = "10.0.0"
+
+# https://github.com/InsertKoinIO/koin/releases
+koin = "4.2.0"
+
+# https://github.com/InsertKoinIO/koin-annotations/releases
+koin-annotation = "2.3.1"
+
+# https://github.com/google/ksp/releases
+google-ksp = "2.3.6"
+
+# https://github.com/touchlab/Kermit/releases
+kermit = "2.1.0"
 
 junit = "4.13.2"
 
 [libraries]
 # Gradle Plugins
 kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
+kotlin-jvm-gradlePlugin = { group = "org.jetbrains.kotlin.jvm", name = "org.jetbrains.kotlin.jvm.gradle.plugin", version.ref = "kotlin" }
 android-gradlePlugin = { module = "com.android.tools.build:gradle", version.ref = "agp" }
 compose-gradlePlugin = { module = "org.jetbrains.kotlin:compose-compiler-gradle-plugin", version.ref = "kotlin" }
 composeMultiplatform-gradlePlugin = { module = "org.jetbrains.compose:compose-gradle-plugin", version.ref = "composeMultiplatform" }
+google-ksp-gradlePlugin = { group = "com.google.devtools.ksp", name = "com.google.devtools.ksp.gradle.plugin", version.ref = "google-ksp" }
 
-kotlinx-coroutinesSwing = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-swing", version.ref = "kotlinx-coroutines" }
+# kotlinx
+kotlinx-coroutinesCore = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "kotlinx-coroutines" }
+kotlinx-coroutinesSwing = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-swing", version.ref = "kotlinx-coroutines" }
+kotlinx-datetime = { group = "org.jetbrains.kotlinx", name = "kotlinx-datetime", version.ref = "kotlinx-datetime" }
+kotlinx-serializationJson = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinx-serialization" }
 
-compose-runtime = { module = "org.jetbrains.compose.runtime:runtime", version.ref = "composeMultiplatform" }
-compose-foundation = { module = "org.jetbrains.compose.foundation:foundation", version.ref = "composeMultiplatform" }
-compose-ui = { module = "org.jetbrains.compose.ui:ui", version.ref = "composeMultiplatform" }
-compose-components-resources = { module = "org.jetbrains.compose.components:components-resources", version.ref = "composeMultiplatform" }
-compose-uiToolingPreview = { module = "org.jetbrains.compose.ui:ui-tooling-preview", version.ref = "composeMultiplatform" }
-compose-material3 = { module = "org.jetbrains.compose.material3:material3", version.ref = "composeMaterial3" }
+# compose multiplatform Libraries
+compose-runtime = { group = "org.jetbrains.compose.runtime", name = "runtime", version.ref = "composeMultiplatform" }
+compose-foundation = { group = "org.jetbrains.compose.foundation", name = "foundation", version.ref = "composeMultiplatform" }
+compose-ui = { group = "org.jetbrains.compose.ui", name = "ui", version.ref = "composeMultiplatform" }
+compose-ui-toolingPreview = { group = "org.jetbrains.compose.ui", name = "ui-tooling-preview", version.ref = "composeMultiplatform" }
+compose-components-resources = { group = "org.jetbrains.compose.components", name = "components-resources", version.ref = "composeMultiplatform" }
+compose-material3 = { group = "org.jetbrains.compose.material3", name = "material3", version.ref = "composeMaterial3" }
 
-androidx-lifecycle-viewmodelCompose = { module = "org.jetbrains.androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "androidx-lifecycle" }
-androidx-lifecycle-runtimeCompose = { module = "org.jetbrains.androidx.lifecycle:lifecycle-runtime-compose", version.ref = "androidx-lifecycle" }
+# compose desktop Libraries
+compose-desktop-jvmMacArm64 = { group = "org.jetbrains.compose.desktop", name = "desktop-jvm-macos-arm64", version.ref = "composeMultiplatform" }
+compose-desktop-jvmWindowsX64 = { group = "org.jetbrains.compose.desktop", name = "desktop-jvm-windows-x64", version.ref = "composeMultiplatform" }
+compose-desktop-jvmWindowsArm64 = { group = "org.jetbrains.compose.desktop", name = "desktop-jvm-windows-arm64", version.ref = "composeMultiplatform" }
 
+androidx-lifecycle-viewmodelCompose = { group = "org.jetbrains.androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "androidx-lifecycle" }
+androidx-lifecycle-runtimeCompose = { group = "org.jetbrains.androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "androidx-lifecycle" }
+
+androidx-navigation-composee = { group = "org.jetbrains.androidx.navigation", name = "navigation-compose", version.ref = "androidx-navigation" }
+
+# orbit
+orbit-core = { group = "org.orbit-mvi", name = "orbit-core", version.ref = "orbit" }
+orbit-viewmodel = { group = "org.orbit-mvi", name = "orbit-viewmodel", version.ref = "orbit" }
+orbit-compose = { group = "org.orbit-mvi", name = "orbit-compose", version.ref = "orbit" }
+
+# koin
+koin-core = { group = "io.insert-koin", name = "koin-core", version.ref = "koin" }
+koin-compose = { group = "io.insert-koin", name = "koin-compose", version.ref = "koin" }
+koin-test = { group = "io.insert-koin", name = "koin-test", version.ref = "koin" }
+koin-test-junit4 = { group = "io.insert-koin", name = "koin-test-junit4", version.ref = "koin" }
+koin-viewmodel = { group = "io.insert-koin", name = "koin-compose-viewmodel", version.ref = "koin" }
+koin-navigation = { group = "io.insert-koin", name = "koin-compose-viewmodel-navigation", version.ref = "koin" }
+koin-android = { group = "io.insert-koin", name = "koin-android", version.ref = "koin" }
+koin-annotation = { group = "io.insert-koin", name = "koin-annotations", version.ref = "koin-annotation" }
+koin-ksp = { group = "io.insert-koin", name = "koin-ksp-compiler", version.ref = "koin-annotation" }
+
+# test
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
 kotlin-testJunit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin" }
 junit = { module = "junit:junit", version.ref = "junit" }
+
+# third
+logger-kermit = { group = "co.touchlab", name = "kermit", version.ref = "kermit" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
@@ -45,6 +110,10 @@ androidLibrary = { id = "com.android.library", version.ref = "agp" }
 kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 kotlinMultiplatformAndroid = { id = "com.android.kotlin.multiplatform.library", version.ref = "agp" }
 
+kotlinx-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+
 composeCompiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 composeMultiplatform = { id = "org.jetbrains.compose", version.ref = "composeMultiplatform" }
 composeHotReload = { id = "org.jetbrains.compose.hot-reload", version.ref = "composeHotReload" }
+
+ksp = { id = "com.google.devtools.ksp", version.ref = "google-ksp" }
