@@ -34,12 +34,12 @@ kotlin {
 
 compose.desktop {
     application {
-        mainClass = "com.huihun.playground.MainKt"
+        mainClass = libs.versions.mac.version.get() + "MainKt"
 
         nativeDistributions {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
-            packageName = "com.huihun.playground"
-            packageVersion = "1.0.0"
+            packageName = libs.versions.mac.version.get()
+            packageVersion = libs.versions.mac.version.get()
         }
     }
 }
